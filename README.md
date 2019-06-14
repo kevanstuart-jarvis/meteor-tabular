@@ -9,7 +9,7 @@ A fork of the meteor package aldeed:meteor-tabular to modify the behaviour of th
 $ meteor add orderin:tabular
 ```
 
-## Broken behaviour from Aldeed/meteor-tabular
+## Existing behaviour from Aldeed/meteor-tabular
 
 You can optionally provide an `allowFields` function to control which clients can get the published data. These are used by the built-in publications on the server only.
 
