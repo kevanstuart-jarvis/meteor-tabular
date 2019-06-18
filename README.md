@@ -1,4 +1,4 @@
-orderin:tabular
+kevanstuart:tabular
 =========================
 
 A fork of the meteor package aldeed:meteor-tabular to modify the behaviour of the allowFields option to include / exclude specific columns - and then hide those columns on the frontend.
@@ -6,7 +6,7 @@ A fork of the meteor package aldeed:meteor-tabular to modify the behaviour of th
 ## Installation
 
 ```bash
-$ meteor add orderin:tabular
+$ meteor add kevanstuart:tabular
 ```
 
 ## Existing behaviour from Aldeed/meteor-tabular

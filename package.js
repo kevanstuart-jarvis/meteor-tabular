@@ -1,7 +1,7 @@
 /* global Package, Npm */
 
 Package.describe({
-  name: 'orderin:tabular',
+  name: 'kevanstuart:tabular',
   summary: 'Datatables for large or small datasets in Meteor, fork from aldeed:meteor-tabular',
   version: '2.1.1',
   git: 'https://github.com/kevanstuart-jarvis/meteor-tabular/'
