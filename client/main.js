@@ -225,7 +225,14 @@ Template.tabular.onRendered(function () {
     lastTableName = tabularTable.name;
 
     // Figure out and update the columns, fields, and searchFields
-    const columns = tableInit(tabularTable, template);
+    const initialColumns = tableInit(tabularTable, template);
+    const projection = tabularTable.allowFields(Meteor.userId(), {});
+
+    const tmpRemoveColumns = Object.entries(projection)
+      .filter(field => field[1] === 0)
+      .map(field => field[0]);
+
+    const columns = initialColumns.filter(c => !tmpRemoveColumns.includes(c.data));
 
     // Set/update everything else
     template.tabular.searchCaseInsensitive = true;

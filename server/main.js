@@ -44,6 +44,11 @@ Meteor.publish('tabular_genericPub', function (tableName, ids, fields) {
     return;
   }
 
+  // Check security for fields - allow this function to filter by field properly
+  if (typeof table.allowFields === 'function' && !!table.allowFields(this.userId, fields)) {
+    fields = table.allowFields(this.userId, fields);
+  }
+
   return table.collection.find({_id: {$in: ids}}, {fields: fields});
 });
 
